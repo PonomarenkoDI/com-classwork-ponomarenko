@@ -7,6 +7,8 @@ public class Task5 {
         return str.split(" ");
     }
 
+public String [] getArrWorlds (String str) {
+    return str.split(":");
 }
 
 
@@ -14,6 +16,10 @@ public class Task5 {
         Task5 a = new Task5();
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine().toLowerCase();
+        String [] words = a.getArrayWords(str);
+        String [] words1 = a.getArrWorlds(str);
+
+        char [] probel = 
 
 
 
