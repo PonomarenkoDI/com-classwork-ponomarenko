@@ -20,7 +20,7 @@ public class Map {
     }
 
     public void goToUp() {
-        if (x - 1 < 0 || map[x - 1][y] == 'S') {
+        if (x - 1 < 0 || map[x - 1][y] == 'X') {
             System.out.println("Сюда ходить нельзя!");
         } else {
             map[x - 1][y] = 'P';
@@ -30,7 +30,7 @@ public class Map {
     }
 
     public void goToDown() {
-        if (x + 1 > 9 || map[x + 1][y] == 'S') {
+        if (x + 1 > 9 || map[x + 1][y] == 'X') {
             System.out.println("Сюда ходить нельзя!");
         } else {
             map[x + 1][y] = 'P';
@@ -40,7 +40,7 @@ public class Map {
     }
 
     public void goToLeft() {
-        if (y - 1 < 0 || map[x][y - 1] == 'S') {
+        if (y - 1 < 0 || map[x][y - 1] == 'X') {
             System.out.println("Сюда ходить нельзя!");
         } else {
             map[x][y - 1] = 'P';
@@ -51,7 +51,7 @@ public class Map {
     }
 
     public void goToRight() {
-        if (y + 1 > 9 || map[x][y + 1] == 'S') {
+        if (y + 1 > 9 || map[x][y + 1] == 'X') {
             System.out.println("Сюда ходить нельзя!");
         } else {
             map[x][y + 1] = 'P';
