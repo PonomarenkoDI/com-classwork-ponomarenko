@@ -16,23 +16,27 @@ public class Controller {
         return direction;
     }
 
-    public void novePerson(Map map) {
+    public void movePerson(game.Map map) {
         int move = getDirection();
         switch (move) {
             case (4): {
                 map.goToLeft();
+                map.showMap(map.map);
                 break;
             }
             case (6): {
                 map.goToRight();
+                map.showMap(map.map);
                 break;
             }
             case (8): {
                 map.goToUp();
+                map.showMap(map.map);
                 break;
             }
             case (2): {
                 map.goToDown();
+                map.showMap(map.map);
                 break;
             }
 

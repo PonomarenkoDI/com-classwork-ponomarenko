@@ -1,3 +1,5 @@
+package cw21072022;
+
 import java.util.Arrays;
 
 public class Task6 {

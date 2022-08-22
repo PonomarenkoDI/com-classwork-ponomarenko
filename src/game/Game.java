@@ -1,11 +1,23 @@
 package game;
+
 public class Game {
     public static void main(String[] args) {
         Game obj = new Game();
         Map map = new Map();
+        Controller cont = new Controller();
         obj.creatMap(map);
         obj.creatStone(map);
-        obj.showMap(map.map);
+        obj.creatStone(map);
+        map.addPlayer(9, 0);
+        map.showMap(map.map);
+
+        while (map.x != 0 || map.y != 9) {
+            cont.movePerson(map);
+            if (map.x == 0 && map.y == 9) {
+                System.out.println("The end!;)");
+            }
+        }
+
     }
 
     public void creatMap(Map map) {
@@ -14,15 +26,6 @@ public class Game {
             for (int j = 0; j < map.map[i].length; j++) {
                 map.map[i][j] = '_';
             }
-        }
-    }
-
-    public void showMap(char[][] map) {
-        for (int i = 0; i < map.length; i++) {
-            for (int j = 0; j < map[i].length; j++) {
-                System.out.print(map[i][j] + " ");
-            }
-            System.out.println();
         }
     }
 
