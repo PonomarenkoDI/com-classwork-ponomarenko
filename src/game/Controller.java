@@ -5,13 +5,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Controller {
+
+    int direction = 0;
+
     private int getDirection() {
-        int direction = 0;
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             direction = Integer.parseInt(br.readLine());
-        } catch (IOException ex) {
+        } catch (Exception ex) {
             System.out.println("Ошибка ввода");
+            getDirection();
         }
         return direction;
     }
