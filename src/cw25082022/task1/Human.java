@@ -1,14 +1,16 @@
 package cw25082022.task1;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Human {
     private String nameSurnamePatronymic;
-    private int dateBorn;
+    private LocalDate dateBorn;
     private long numberPhone;
     private String city;
     private String country;
     private String addressHome;
+
     private Scanner sc = new Scanner(System.in);
 
     public String getNameSurnamePatronymic() {
@@ -20,13 +22,16 @@ public class Human {
         this.nameSurnamePatronymic = sc.nextLine();
     }
 
-    public int getDateBorn() {
+    public LocalDate getDateBorn() {
         return dateBorn;
     }
 
     public void setDateBorn() {
+        int day = sc.nextInt();
+        int month = sc.nextInt();
+        int year = sc.nextInt();
         System.out.println("Введите дату рождения: ");
-        this.dateBorn = sc.nextInt();
+        this.dateBorn = LocalDate.of(year,month,year);
     }
 
     public long getNumberPhone() {

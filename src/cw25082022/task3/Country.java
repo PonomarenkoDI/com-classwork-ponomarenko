@@ -10,7 +10,7 @@ public class Country {
     private String nameCapitalOfCountry;
     private String namesCitiesOfCountry;
 
-    Scanner sc = new Scanner(System.in);
+    private Scanner sc = new Scanner(System.in);
 
     public String getNameCountry() {
         return nameCountry;

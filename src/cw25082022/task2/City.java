@@ -10,7 +10,7 @@ public class City {
     private int postIndexOfCity;
     private int phoneCodeOfCity;
 
-    Scanner sc = new Scanner(System.in);
+    private Scanner sc = new Scanner(System.in);
 
     public String getNameCity() {
         return nameCity;
