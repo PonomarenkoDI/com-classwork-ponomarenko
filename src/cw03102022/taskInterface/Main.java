@@ -7,17 +7,15 @@ public class Main {
         a[1] = new BMW();
 
         for (Motor element: a
-             ) { element.BipBip();
+             ) { element.zapuskMotor();
              element.GoOnRoot();
              element.zapuskMotor();
-             
-
+             element.BipBip();
+             element.GoCar();
+             element.nagatieGazOrTormoz();
+             element.switchTransmission();
+            System.out.println();
         }
-
-        Signal [] s = new Signal[2];
-        s[0] = new BMW();
-        s[1] = new Audi();
-
 
     }
 }
