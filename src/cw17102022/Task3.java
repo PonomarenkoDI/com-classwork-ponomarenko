@@ -15,33 +15,19 @@ public class Task3 {
         int [] array5 = {88, 99, 80};
         int [] array6 = {87, 7};
         task3.exeptionArrays(array1, 3 , 2, array2, 2 , 1);
-        task3.exeptionArrays1(array3, 0, 2, array4, 0, 1);
-        task3.exeptionArrays2(array5, 0, 8, array6, 1, 0);
+        task3.exeptionArrays(array3, 0, 2, array4, 0, 1);
+        task3.exeptionArrays(array5, 0, 8, array6, 1, 0);
     }
 
     public void exeptionArrays(int[] a, int aFromIndex, int aToIndex,
-                               int[] b, int bFromIndex, int bToIndex){
+                               int[] b, int bFromIndex, int bToIndex) {
         try {
             Arrays.compare(a, aFromIndex, aToIndex, b, bFromIndex, bToIndex);
-        } catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             System.err.println("Hello from IllegalArgumentException");
-        }
-
-    }
-    public void exeptionArrays1 (int[] a, int aFromIndex, int aToIndex,
-                                 int[] b, int bFromIndex, int bToIndex){
-        try {
-            Arrays.compare(a, aFromIndex, aToIndex, b, bFromIndex, bToIndex);
-        } catch (NullPointerException e){
+        } catch (NullPointerException e) {
             System.err.println("Hello from NullPointerException");
-        }
-    }
-
-    public void exeptionArrays2 (int[] a, int aFromIndex, int aToIndex,
-                                 int[] b, int bFromIndex, int bToIndex){
-        try {
-            Arrays.compare(a, aFromIndex, aToIndex, b, bFromIndex, bToIndex);
-        } catch (ArrayIndexOutOfBoundsException e){
+        } catch (ArrayIndexOutOfBoundsException e) {
             System.err.println("Hello from ArrayIndexOutOfBoundsException");
         }
 
