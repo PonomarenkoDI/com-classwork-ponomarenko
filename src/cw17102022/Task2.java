@@ -29,7 +29,7 @@ public class Task2 {
     public void veryfyRange() {
         try {
             proverDiapazon();
-        } catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
             getText();
             veryfyRange();
@@ -37,8 +37,8 @@ public class Task2 {
     }
 
     public void proverDiapazon() throws IllegalArgumentException {
-        if (number <= -5 ||  number >= 5) {
+        if (number <= -5 || number >= 5) {
             throw new IllegalArgumentException("Число в не диапазоне");
         }
-}
+    }
 }
