@@ -39,7 +39,6 @@ public class Task4 {
         array = new int[num.length];
         for (int i = 0; i < array.length; i++) {
             array[i] = Integer.parseInt(num[i]);
-
         }
     }
 }
