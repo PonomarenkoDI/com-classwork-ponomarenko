@@ -1,13 +1,21 @@
 package cw27102022;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Zoo<E>{
-    private E volier;
-    public Zoo (E volier){
-        this.volier = volier;
+
+    List<E> animals;
+
+    public Zoo() {
+        this.animals = new ArrayList<>();
     }
 
-   public E getVolier (){
-        return volier;
-   }
+    public void addAnimals (E animal){
+        animals.add(animal);
+    }
 
+    public List<E> getAnimals (){
+        return animals;
+    }
 }
